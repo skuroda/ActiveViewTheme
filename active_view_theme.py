@@ -15,11 +15,11 @@ class ActiveViewThemeListener(sublime_plugin.EventListener):
             try:
                 open(abs_theme)
             except IOError:
-                print 'Theme ' + active_theme + " does not exist."
+                print('Theme ' + active_theme + " does not exist.")
                 return
             view_settings.set("color_scheme", active_theme)
         else:
-            print "No active theme specified"
+            print("No active theme specified")
 
     def on_deactivated(self, view):
         preference_settings = sublime.load_settings("Preferences.sublime-settings")
